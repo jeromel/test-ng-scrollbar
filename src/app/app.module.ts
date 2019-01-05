@@ -13,6 +13,9 @@ import { AppComponent } from './components/app/app.component';
 import { CarService } from './services/car.service';
 import { JliTableModule } from 'jli-table';
 
+import { NgScrollbarModule } from 'ngx-scrollbar';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -24,6 +27,7 @@ import { JliTableModule } from 'jli-table';
     AppRoutingModule,
     HttpClientModule,
     JliTableModule,
+    NgScrollbarModule
   ],
   providers: [CarService],
   bootstrap: [AppComponent]
