@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TData, TColumn, TDataService, TRow } from 'jli-table';
 import { CarService } from 'src/app/services/car.service';
+import { Car } from 'src/app/models/Car';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ export class AppComponent implements OnInit {
   expanded = true;
   disabled = false;
 
+  cars: Car [];
   data: TData;
 
   columnsConfig: Array<TColumn>;
@@ -54,6 +56,7 @@ export class AppComponent implements OnInit {
     }
 
     this.carService.getCarsSmall().then(result => {
+      this.cars = result;
       TDataService.FormatData(result, this.data, x => this.FormatCars(x));
     });
   }

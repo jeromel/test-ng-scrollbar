@@ -15,7 +15,7 @@ import { JliTableModule } from 'jli-table';
 
 import { NgScrollbarModule } from 'ngx-scrollbar';
 
-
+import { TableModule } from 'primeng/table';
 @NgModule({
   declarations: [
     AppComponent
@@ -27,7 +27,8 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     AppRoutingModule,
     HttpClientModule,
     JliTableModule,
-    NgScrollbarModule
+    NgScrollbarModule,
+    TableModule
   ],
   providers: [CarService],
   bootstrap: [AppComponent]

@@ -39,9 +39,31 @@
     </div>
 </div>
 
-
-<ng-scrollbar class="sample" barClass="scroll-bar" thumbClass="scroll-thumb" [disabled]="disabled">
-  <lib-jli-table [TData]="data"></lib-jli-table>
-</ng-scrollbar>
+<div class="example example1">
+    <div class="content-padding">
+      <ng-scrollbar class="sample" barClass="scroll-bar" thumbClass="scroll-thumb" [disabled]="disabled">
+        <!-- <lib-jli-table [TData]="data"></lib-jli-table> -->
+        <p-table [value]="cars">
+          <ng-template pTemplate="header">
+              <tr>
+                  <th>Vin</th>
+                  <th>Year</th>
+                  <th>Brand</th>
+                  <th>Color</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-car>
+              <tr>
+                  <td>{{car.vin}}</td>
+                  <td>{{car.year}}</td>
+                  <td>{{car.brand}}</td>
+                  <td>{{car.color}}</td>
+              </tr>
+          </ng-template>
+      </p-table>
+      </ng-scrollbar>
+      
+  </div>
+</div>
 
 <router-outlet></router-outlet>
