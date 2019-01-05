@@ -1,8 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './components/app/app.component';
+
+import { CarService } from './services/car.service';
+import { JliTableModule } from 'jli-table';
 
 @NgModule({
   declarations: [
@@ -10,9 +19,13 @@ import { AppComponent } from './components/app/app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    NgbModule,
+    AppRoutingModule,
+    HttpClientModule,
+    JliTableModule,
   ],
-  providers: [],
+  providers: [CarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
