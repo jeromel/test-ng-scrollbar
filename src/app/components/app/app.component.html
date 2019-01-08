@@ -41,9 +41,9 @@
 
 <div class="example example1">
     <div class="content-padding">
-      <ng-scrollbar class="sample" barClass="scroll-bar" thumbClass="scroll-thumb" [disabled]="disabled">
-        <!-- <lib-jli-table [TData]="data"></lib-jli-table> -->
-        <p-table [value]="cars">
+      <ng-scrollbar [autoUpdate]="false"  class="sample" barClass="scroll-bar" thumbClass="scroll-thumb" [disabled]="disabled">
+        <lib-jli-table [TData]="data"></lib-jli-table>
+        <!-- <p-table [value]="cars">
           <ng-template pTemplate="header">
               <tr>
                   <th>Vin</th>
@@ -60,7 +60,7 @@
                   <td>{{car.color}}</td>
               </tr>
           </ng-template>
-      </p-table>
+      </p-table> -->
       </ng-scrollbar>
       
   </div>
